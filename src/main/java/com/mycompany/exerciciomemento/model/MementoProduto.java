@@ -15,7 +15,7 @@ public class MementoProduto {
         this.preco = preco;
     }
     
-    public MementoProduto(){
+    protected MementoProduto(){
         
     }
 
