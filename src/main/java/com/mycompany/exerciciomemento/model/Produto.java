@@ -8,11 +8,13 @@ public class Produto {
     private String nome;
     private double custo;  
     private double preco;
-
+    private MementoProduto mementoProduto;
+    
     public Produto(String nome, double custo, double preco) {
         this.nome = nome;
         this.custo = custo;
         this.preco = preco;
+        this.mementoProduto = criar();
     }
 
     public String getNome() {
@@ -25,6 +27,10 @@ public class Produto {
 
     public double getPreco() {
         return preco;
+    }
+
+    public MementoProduto getMementoProduto() {
+        return mementoProduto;
     }
 
     public void setNome(String nome) {

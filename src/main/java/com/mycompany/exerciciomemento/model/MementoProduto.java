@@ -9,25 +9,25 @@ public class MementoProduto {
     private double custo;
     private double preco;
 
-    protected MementoProduto(String nome, double custo, double preco) {
+    MementoProduto(String nome, double custo, double preco) {
         this.nome = nome;
         this.custo = custo;
         this.preco = preco;
     }
     
-    protected MementoProduto(){
+    MementoProduto(){
         
     }
 
-    protected String getNome() {
+    String getNome() {
         return nome;
     }
 
-    protected double getCusto() {
+    double getCusto() {
         return custo;
     }
 
-    protected double getPreco() {
+    double getPreco() {
         return preco;
     }
      
