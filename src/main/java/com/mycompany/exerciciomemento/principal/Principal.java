@@ -1,7 +1,6 @@
 package com.mycompany.exerciciomemento.principal;
 
 import com.mycompany.exerciciomemento.model.Produto;
-import com.mycompany.exerciciomemento.zelador.Zelador;
 
 /**
  *
@@ -20,7 +19,7 @@ public class Principal {
         try {
             zelador.add(produto.criar());
         } catch (Exception ex) {
-            throw new RuntimeException("Erro ao adicionar um Produto Memento ao Zelador");
+            throw new RuntimeException("Erro ao adicionar um Produto Memento ao Zelador" + ex.getMessage());
         }
 
         produto.setCusto(21.0);
@@ -30,13 +29,13 @@ public class Principal {
         try {
             zelador.add(produto.criar());
         } catch (Exception ex) {
-            throw new RuntimeException("Erro ao adicionar um Produto Memento ao Zelador");
+            throw new RuntimeException("Erro ao adicionar um Produto Memento ao Zelador" + ex.getMessage());
         }
 
         try {
             produto.restaurar(zelador.desfazer());
         } catch (Exception ex) {
-            throw new RuntimeException("Erro ao restaurar um produto");
+            throw new RuntimeException("Erro ao restaurar um produto" + ex.getMessage());
         }
         
         System.out.println("Após desfazer: " + produto);
@@ -44,7 +43,7 @@ public class Principal {
         try {
             produto.restaurar(zelador.refazer());
         } catch (Exception ex) {
-            throw new RuntimeException("Erro ao restaurar um produto");
+            throw new RuntimeException("Erro ao restaurar um produto" + ex.getMessage());
         }
         
         System.out.println("Após refazer: " + produto);
